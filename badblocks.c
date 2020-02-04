@@ -404,7 +404,7 @@ static int64_t do_write(HANDLE hDrive, unsigned char * buffer, uint64_t tryout,
 	return got;
 }
 
-static unsigned int test_rw(HANDLE hDrive, blk64_t last_block, size_t block_size, blk64_t first_block,
+static  unsigned int test_rw(HANDLE hDrive, blk64_t last_block, size_t block_size, blk64_t first_block,
 							size_t blocks_at_once, int pattern_type, int nb_passes)
 {
 	const unsigned int pattern[BADLOCKS_PATTERN_TYPES][BADBLOCK_PATTERN_COUNT] =
