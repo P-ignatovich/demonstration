@@ -105,7 +105,7 @@ class TestClient(unittest.TestCase):
         resp.write_stdin("echo test string 2 >&2\n")
         line = resp.readline_stderr(timeout=5)
         self.assertFalse(resp.peek_stdout())
-        self.assertEqual("test string 2", line)
+        self.assertEqual( "test string 2", line)
         resp.write_stdin("exit\n")
         resp.update(timeout=5)
         line = resp.read_channel(ERROR_CHANNEL)
@@ -131,7 +131,7 @@ class TestClient(unittest.TestCase):
         self.assertTrue(resp.status.phase)
 
         while True:
-            resp = api.read_namespaced_pod(name=name,
+            resp = api.read_namespaced_pod( name=name,
                                            namespace='default')
             self.assertEqual(name, resp.metadata.name)
             self.assertTrue(resp.status.phase)
@@ -154,7 +154,7 @@ class TestClient(unittest.TestCase):
 
             self.assertIsNone(client.returncode)
             client.run_forever(timeout=10)
-            self.assertEqual(client.returncode, value)
+            self.assertEqual( client.returncode, value)
 
         resp = api.delete_namespaced_pod(name=name, body={},
                                          namespace='default')
