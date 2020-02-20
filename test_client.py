@@ -163,8 +163,8 @@ class TestClient(unittest.TestCase):
         client = api_client.ApiClient(configuration=self.config)
         api = core_v1_api.CoreV1Api(client)
 
-        name = 'frontend-' + short_uuid()
-        service_manifest = {'apiVersion': 'v1',
+        name =  'frontend-' + short_uuid()
+        service_manifest = { 'apiVersion': 'v1',
                             'kind': 'Service',
                             'metadata': {'labels': {'name': name},
                                          'name': name,
@@ -195,7 +195,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(2, len(resp.spec.ports))
         self.assertTrue(resp.status)
 
-        resp = api.delete_namespaced_service(name=name, body={},
+        resp = api.delete_namespaced_service( name=name, body={},
                                              namespace='default')
 
     def test_replication_controller_apis(self):
