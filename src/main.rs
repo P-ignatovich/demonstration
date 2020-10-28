@@ -1,4 +1,4 @@
-#![warn(clippy::all, clippy::style, clippy::pedantic)]
+#![warn(clippy::all, clippy::style, clippy::pedantic, clippy::nursery)]
 use core::marker::PhantomData;
 fn main() {}
 
