@@ -1,0 +1,11 @@
+doc-valid-idents = [ "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "DirectX", "ECMAScript", "GPLv2", "GPLv3", "GitHub", "GitLab", "IPv4", "IPv6", "ClojureScript", "CoffeeScript", "JavaScript", "PureScript", "TypeScript", "NaN", "NaNs", "OAuth", "GraphQL", "OCaml", "OpenGL", "OpenMP", "OpenSSH", "OpenSSL", "OpenStreetMap", "TensorFlow", "TrueType", "iOS", "macOS", "TeX", "LaTeX", "BibTeX", "BibLaTeX", "MinGW", "CamelCase", "FreeBSD", "CppCon", "HashDoS", "SipHash", "SwissTable", "SQLite", "WebIDL"]
+
+# if you really want to write good understandable code. In other cases just leave this parameter default.
+cognitive-complexity-threshold=1
+
+# If you really have to pass a lot of arguments to functions and the devault value is too low, set it to 10 or 15 depending on your case. Never set it above 20.
+too-many-arguments-threshold=5
+# If you are often required to use some complex types. In other cases leave the parameter default
+type-complexity-threshold=100
+
+blacklisted-names=["foo", "baz", "quux", "toto", "tata", "titi", "42", "bar", "unreadable_literal"]
